@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 function Home() {
   return <div>hi Home</div>;
@@ -8,7 +8,7 @@ function About() {
 }
 function App() {
   // 宣告一個新的 state 變數，我們叫他「count」
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <Switch>
