@@ -1,8 +1,6 @@
 import React from 'react';
+import Home from '../home';
 import { Switch, Route } from 'react-router-dom';
-function Home() {
-  return <div>hi Home</div>;
-}
 function About() {
   return <div>hi About</div>;
 }
