@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useRouteMatch } from "react-router-dom";
+// import { useRouteMatch } from "react-router-dom";
 import styles from "./style.module.scss";
 console.log(styles);
 function About() {
   const [count, setCount] = useState(0);
-  const match = useRouteMatch();
-  console.log(match.path);
+  // const match = useRouteMatch();
+  // console.log(match.path);
   useEffect(() => {
     console.log("useEffect work");
   });
