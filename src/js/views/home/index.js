@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-
 import TestPNG from "../../../assets/static/test.png";
-import Input from "../../components/input";
+import Input from "../../components/Input";
+
 function Home() {
   const form = {
-    test: "1231"
+    test: "1231sdfg"
   };
   useEffect(() => {
     console.log("useEffect work");
