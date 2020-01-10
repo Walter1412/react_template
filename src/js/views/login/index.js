@@ -27,13 +27,17 @@ function Home() {
         render={({ handleSubmit, form, submitting, pristine }) => (
           <form onSubmit={handleSubmit}>
             <Field name="userName">
-              {({ input, meta }) => (
-                <div>
-                  <label>UserName</label>
-                  <input {...input} type="text" placeholder="userName" />
-                  {meta.error && meta.touched && <span>{meta.error}</span>}
-                </div>
-              )}
+              {({ input, meta }) => {
+                console.log(input);
+
+                return (
+                  <div>
+                    <label>UserName</label>
+                    <input {...input} type="text" placeholder="userName" />
+                    {meta.error && meta.touched && <span>{meta.error}</span>}
+                  </div>
+                );
+              }}
             </Field>
             <Field name="password">
               {({ input, meta }) => (

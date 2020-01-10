@@ -4,20 +4,16 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 function Input(props) {
-  const { type: inputType, value: inputValue, ...restProps } = props;
+  const { type: inputType, value, onChange, ...restProps } = props;
 
   const [type] = useState(inputType || "text");
-  const [value, setValue] = useState(inputValue);
 
-  function handleValue(event) {
-    setValue(event.target.value);
-  }
   return (
     <>
       <input
         value={value}
         type={type || "text"}
-        onChange={handleValue}
+        onChange={onChange}
         className={cx("input")}
         {...restProps}
       ></input>
