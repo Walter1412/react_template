@@ -14,7 +14,7 @@ function Login() {
 	return (
 		<>
 			<LoginForm />
-			<div className={[basic]}>sdffasfasf</div>
+			<div className={basic}>sdffasfasf</div>
 		</>
 	)
 }
