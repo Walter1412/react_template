@@ -16,6 +16,7 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["react", "prettier"],
+  ignorePatterns: ["node_modules/"],
   rules: {
     "prettier/prettier": [
       "error",
@@ -27,6 +28,8 @@ module.exports = {
         singleQuote: true,
         useTabs: true
       }
-    ]
+    ],
+    "no-unused-vars": 0,
+    "react/prop-types": 0
   }
 };
