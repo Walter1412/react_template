@@ -8,12 +8,16 @@ function Input(props) {
 
   const [type] = useState(inputType || "text");
 
+  function handleChange(event) {
+    onChange(event);
+  }
+
   return (
     <>
       <input
         value={value}
         type={type || "text"}
-        onChange={onChange}
+        onChange={handleChange}
         className={cx("input")}
         {...restProps}
       ></input>

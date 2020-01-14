@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.27",
     "final-form": "^4.18.6",
     "graphql": "^14.5.8",
     "graphql.macro": "^1.4.2",

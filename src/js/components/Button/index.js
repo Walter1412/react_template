@@ -4,7 +4,7 @@ import classNames from "js/components/Input/node_modules/classnames/bind";
 let cx = classNames.bind(styles);
 console.log(cx);
 
-function Input(props) {
+function Buton(props) {
   return (
     <>
       <button {...props}></button>
@@ -12,4 +12,4 @@ function Input(props) {
   );
 }
 
-export default Input;
+export default Buton;

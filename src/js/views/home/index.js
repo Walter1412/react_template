@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TestPNG from "../../../assets/static/test.png";
+import TestPNG from "../../../assets/images/static/test.png";
 import Input from "../../components/Input";
 
 function Home() {
