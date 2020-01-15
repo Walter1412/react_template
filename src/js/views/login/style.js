@@ -1,9 +1,8 @@
-import styled, { css } from 'react-emotion'
-console.log(styled)
-export default props => {
-	console.log(props)
-	const important = css`
-		color: hotpink;
-	`
-	console.log(important)
-}
+import { styled } from 'js/lib/plugins/emotion'
+
+export const Example = styled('span')`
+	color: lightgreen;
+	& > a {
+		color: ${props => props.color};
+	}
+`

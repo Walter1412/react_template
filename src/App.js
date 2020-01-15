@@ -1,13 +1,17 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Home from 'js/views/home'
-import Login from 'js/views/login'
-import About from 'js/views/about'
-import Hook from 'js/views/hook'
+import { Switch, Route, useLocation } from 'react-router-dom'
+import { cloneDeep } from 'lodash'
+import { Wrapper } from './style'
+import Home from './js/views/home'
+import Login from './js/views/login'
+import About from './js/views/about'
+import Hook from './js/views/hook'
 
 function App() {
+	const { pathname } = useLocation()
+
 	return (
-		<div>
+		<Wrapper pageName={cloneDeep(pathname).replace('/', '')}>
 			<Switch>
 				<Route path='/login'>
 					<Login />
@@ -22,7 +26,7 @@ function App() {
 					<Home />
 				</Route>
 			</Switch>
-		</div>
+		</Wrapper>
 	)
 }
 

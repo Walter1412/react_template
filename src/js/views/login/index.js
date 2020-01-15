@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LoginForm from './components/Form'
-import { jsx, css } from '@emotion/core'
-const base = css`
-	color: hotpink;
-`
+import { Example } from './style'
 
 function Login() {
 	return (
 		<>
 			<LoginForm />
-			<div css={base}>sdffasfasf</div>
+			<Example color='red'>
+				<a>qweqwe</a>
+			</Example>
 		</>
 	)
 }
