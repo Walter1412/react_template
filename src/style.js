@@ -9,18 +9,26 @@ const pages = {
 	login: css`
 		${mq({
 			border: ['1px solid pink', '1px solid yellow', '1px solid black'],
-			color: ['#ff0000', '#ff00ff', '#ffff00', '#ff0ff0'],
 		})}
 	`,
 }
 
 export const Wrapper = styled('div')`
+	label: wrapper;
 	width: 100%;
 	height: 100%;
-	border: 1px solid blue;
+
 	${props => {
-		console.log(pages)
 		const { pageName } = props
-		return pages[pageName].styles
+		return !pages[pageName] ? '' : pages[pageName].styles
 	}};
+`
+
+export const Container = styled('div')`
+	label: container;
+	margin: 0 auto;
+	border: 1px solid red;
+	${mq({
+		width: ['100%', '560px', '720px', '900px'],
+	})};
 `

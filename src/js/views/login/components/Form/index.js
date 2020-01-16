@@ -3,7 +3,6 @@ import styles from './style.module.scss'
 import classNames from 'classnames/bind'
 import { Form, Field } from 'react-final-form'
 const cx = classNames.bind(styles)
-console.log(cx)
 
 function LoginForm(props) {
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -11,19 +10,20 @@ function LoginForm(props) {
 		await sleep(300)
 		window.alert(JSON.stringify(values, 0, 2))
 	}
+	const validate = values => {
+		const errors = {}
+		if (!values.userName) {
+			errors.userName = 'Required'
+		}
+		if (!values.password) {
+			errors.password = 'Required'
+		}
+		return errors
+	}
 	return (
 		<Form
 			onSubmit={onSubmit}
-			validate={values => {
-				const errors = {}
-				if (!values.userName) {
-					errors.userName = 'Required'
-				}
-				if (!values.password) {
-					errors.password = 'Required'
-				}
-				return errors
-			}}
+			validate={validate}
 			render={({ handleSubmit, form, submitting, pristine }) => (
 				<form onSubmit={handleSubmit}>
 					<Field name='userName'>
