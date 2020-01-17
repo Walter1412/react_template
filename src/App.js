@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, useLocation } from 'react-router-dom'
+import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import { cloneDeep } from 'lodash'
 import { Wrapper, Container } from './style'
 import Home from './js/views/home'
@@ -12,12 +12,13 @@ function App() {
 		<Wrapper pageName={cloneDeep(pathname).replace('/', '')}>
 			<Container>
 				<Switch>
-					<Route path='/login'>
+					<Route strict sensitive path='/login'>
 						<Login />
 					</Route>
-					<Route path='/'>
+					<Route strict sensitive path='/home'>
 						<Home />
 					</Route>
+					<Redirect push from='/' to='/home' />
 				</Switch>
 			</Container>
 		</Wrapper>

@@ -10,6 +10,7 @@ function LoginForm(props) {
 		await sleep(300)
 		window.alert(JSON.stringify(values, 0, 2))
 	}
+
 	const validate = values => {
 		const errors = {}
 		if (!values.userName) {
