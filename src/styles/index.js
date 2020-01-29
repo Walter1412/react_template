@@ -1,8 +1,11 @@
 import { styled, css, mq } from 'js/lib/plugins/emotion'
+import Global from './global'
+import Theme from './theme'
 import normalize from 'normalize.css'
 
 export const styles = css`
 	${normalize}
+	${Global}
 `
 
 const pages = {
@@ -32,3 +35,5 @@ export const Container = styled('div')`
 		width: ['100%', '560px', '720px', '900px'],
 	})};
 `
+
+export { Theme }
