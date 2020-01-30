@@ -3,7 +3,7 @@ import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import { ThemeProvider } from 'emotion-theming'
 import Loadable from '@loadable/component'
 import { cloneDeep } from 'lodash'
-import { Wrapper, Container } from './styles'
+import { Layout } from 'styles'
 
 const loading = () => {
 	return <div>Loading...</div>
@@ -27,15 +27,15 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Wrapper pageName={cloneDeep(pathname).replace('/', '')}>
-				<Container>
+			<Layout.Wrapper pageName={cloneDeep(pathname).replace('/', '')}>
+				<Layout.Container>
 					<Switch>
 						<Route strict sensitive path='/login' component={Login} />
 						<Route strict sensitive path='/home' component={Home} />
 						<Redirect push from='/' to='/home' />
 					</Switch>
-				</Container>
-			</Wrapper>
+				</Layout.Container>
+			</Layout.Wrapper>
 		</ThemeProvider>
 	)
 }
