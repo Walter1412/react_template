@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { Layout } from 'styles'
+import { cloneDeep } from 'lodash'
 import LoginForm from './components/Form'
-import Global from 'styles/global'
 import { Example } from './style'
-console.log(Global)
 
 function Login() {
+	const location = useLocation()
+	const { pathname } = location
 	return (
-		<>
-			<LoginForm />
-			<Example color='red'>
-				<a>qweqwsadf</a>
-			</Example>
-		</>
+		<Layout.Wrapper pageName={cloneDeep(pathname).replace('/', '')}>
+			<Layout.Container>
+				<LoginForm />
+				<Example color='red'>
+					<a className='test'>qweqwsadf</a>
+				</Example>
+			</Layout.Container>
+		</Layout.Wrapper>
 	)
 }
 export default Login

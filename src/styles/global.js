@@ -1,2 +1,7 @@
 // global class or element
-export default {}
+import { css } from 'js/lib/plugins/emotion'
+export default () => css`
+	.test {
+		color: blue;
+	}
+`

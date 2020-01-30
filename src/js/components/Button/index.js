@@ -1,8 +1,4 @@
-import React, { useState } from 'js/components/Input/node_modules/react'
-import styles from './style.module.scss'
-import classNames from 'js/components/Input/node_modules/classnames/bind'
-const cx = classNames.bind(styles)
-console.log(cx)
+import React, { useState } from 'react'
 
 function Buton(props) {
 	return (
