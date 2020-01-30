@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Layout } from 'styles'
+import Layout from 'styles/layout'
 import { cloneDeep } from 'lodash'
 import LoginForm from './components/Form'
 import { Example } from './style'
@@ -13,7 +13,7 @@ function Login() {
 			<Layout.Container>
 				<LoginForm />
 				<Example color='red'>
-					<a className='test'>qweqwsadf</a>
+					<h1>qweqwsadf</h1>
 				</Example>
 			</Layout.Container>
 		</Layout.Wrapper>

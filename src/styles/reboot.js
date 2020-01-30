@@ -1,17 +1,18 @@
 import { css } from 'js/lib/plugins/emotion'
+import normalize from 'normalize.css'
 import Theme from './theme'
 const { fontFamily, color } = Theme
+
 export default () => css`
+	${normalize}
 	html {
 		box-sizing: border-box;
 	}
-
 	*,
 	*:before,
 	*:after {
 		box-sizing: inherit;
 	}
-
 	body {
 		font-family: ${fontFamily};
 		line-height: 1.5;
@@ -102,5 +103,9 @@ export default () => css`
 	h5,
 	h6 {
 		margin: 0;
+		color: red;
+	}
+	.test {
+		color: red;
 	}
 `
