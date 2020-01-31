@@ -1,4 +1,4 @@
-import { css } from 'js/lib/plugins/emotion'
+import { css } from 'lib/plugins/emotion'
 import normalize from 'normalize.css'
 import Theme from './theme'
 const { fontFamily, color } = Theme
@@ -103,9 +103,6 @@ export default () => css`
 	h5,
 	h6 {
 		margin: 0;
-		color: red;
-	}
-	.test {
 		color: red;
 	}
 `

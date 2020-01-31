@@ -1,4 +1,4 @@
-import { styled, css, mq } from 'js/lib/plugins/emotion'
+import { styled, css, mq } from 'lib/plugins/emotion'
 
 const pages = {
 	login: css`

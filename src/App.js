@@ -3,7 +3,8 @@ import { jsx, Global } from '@emotion/core'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { ThemeProvider } from 'emotion-theming'
 import Loadable from '@loadable/component'
-import Reboot from 'styles/reboot'
+import styleReboot from 'styles/reboot'
+import styleGlobal from 'styles/global'
 import Theme from 'styles/theme'
 
 const loading = () => {
@@ -20,9 +21,9 @@ const Login = Loadable(() => import('./js/views/login'), {
 function App() {
 	return (
 		<>
-			<Global styles={Reboot} />
+			<Global styles={styleReboot} />
+			<Global styles={styleGlobal} />
 			<ThemeProvider theme={Theme}>
-				<div className='test'>sdfsdf</div>
 				<Switch>
 					<Route strict sensitive path='/login' component={Login} />
 					<Route strict sensitive path='/home' component={Home} />
