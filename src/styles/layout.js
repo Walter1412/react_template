@@ -16,7 +16,7 @@ export default {
 
 		${props => {
 			const { pageName } = props
-			return !pages[pageName] ? '' : pages[pageName].styles
+			return !pages[pageName] ? '' : pages[pageName]
 		}};
 	`,
 	Container: styled('div')`
