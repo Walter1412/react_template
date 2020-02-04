@@ -7,7 +7,8 @@ function Header(props) {
 }
 
 function HeaderWithRef(props) {
-	return <Header css={style().Header} {...props}></Header>
+	const getStyle = style(props)
+	return <Header css={getStyle.Header} {...props}></Header>
 }
 
 export default HeaderWithRef
