@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Header } from 'components/project'
+import { Header, Footer } from 'components/project'
 
 function Home(props) {
 	useEffect(() => {})
@@ -8,7 +8,7 @@ function Home(props) {
 		<>
 			<Header></Header>
 			<main></main>
-			<footer></footer>
+			<Footer></Footer>
 		</>
 	)
 }
