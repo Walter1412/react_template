@@ -1,4 +1,4 @@
-import { styled } from 'js/lib/plugins/emotion'
+import { styled } from 'lib/plugins/emotion'
 
 export const Example = styled('span')`
 	color: lightgreen;

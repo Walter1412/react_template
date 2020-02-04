@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ["plugin:react/recommended", "standard", "prettier"],
+  extends: ["eslint:recommended","plugin:react/recommended", "standard", "prettier"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"

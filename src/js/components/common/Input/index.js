@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-import styles from './style.module.scss'
-import classNames from 'classnames/bind'
-const cx = classNames.bind(styles)
-
 function Input(props) {
 	const { type: inputType, value, onChange, ...restProps } = props
 
@@ -18,7 +14,6 @@ function Input(props) {
 				value={value}
 				type={type || 'text'}
 				onChange={handleChange}
-				className={cx('input')}
 				{...restProps}
 			></input>
 		</>
