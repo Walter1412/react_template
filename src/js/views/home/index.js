@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Button } from 'components/common'
 import { Header, Footer } from 'components/project'
 
 function Home(props) {
@@ -7,7 +8,9 @@ function Home(props) {
 	return (
 		<>
 			<Header></Header>
-			<main></main>
+			<main>
+				<Button>asdf</Button>
+			</main>
 			<Footer></Footer>
 		</>
 	)
