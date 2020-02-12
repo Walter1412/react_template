@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import style from './style'
 
 function Buton(props) {
-	const { children, dataColor } = props
+	const { prefix, suffix, children, customizeCSS } = props
 	const getStyle = style(props)
 	return (
-		<getStyle.Button color='yellow' data-color={dataColor}>
+		<getStyle.Button color='pink' customizeCSS={customizeCSS}>
+			{prefix}
 			{children}
+			{suffix}
 		</getStyle.Button>
 	)
 }
