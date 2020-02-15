@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { styled, css, mq } from 'lib/plugins/emotion'
-import { Button, Input } from 'components/common'
+import { Button, Form } from 'components/common'
 import { Header, Footer } from 'components/project'
 
 function Home(props) {
@@ -10,7 +10,7 @@ function Home(props) {
 		<>
 			<Header></Header>
 			<main>
-				<Input></Input>
+				<Form.Input></Form.Input>
 				<Button
 					customizeCSS={props => {
 						return mq({

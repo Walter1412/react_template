@@ -1,4 +1,4 @@
 import Button from 'components/common/Button'
-import Input from 'components/common/Input'
+import Form from 'components/common/Form/'
 
-export { Button, Input }
+export { Button, Form }

@@ -1,45 +1,47 @@
-import { styled, css } from 'lib/plugins/emotion'
+import { styled, css, rem } from 'lib/plugins/emotion'
 import { useTheme } from 'emotion-theming'
 
 export default props => {
-	const themeContext = useTheme()
-	console.log('themeContext :', themeContext)
+	// props
 	const { href } = props
-	const elementType = 'button'
-
+	// theme
+	const { colors, border } = useTheme()
+	// variables
 	const buttonSize = props => {
-		const { size } = props
-		const index = size || 'lg'
+		const { dataSize } = props
+		const index = dataSize || 'xs'
 		const config = {
 			xs: css`
-				padding: 0;
-				font-size: 12px;
+				padding: 8px;
+				font-size: ${rem(12)};
 			`,
 			sm: css`
-				padding: 0 16px;
-				font-size: 14px;
+				padding: 8px 16px;
+				font-size: ${rem(14)};
 			`,
 			md: css`
-				padding: 0 20px;
-				font-size: 14px;
+				padding: 10px 20px;
+				font-size: ${rem(16)};
 			`,
 			lg: css`
-				padding: 0 24px;
-				font-size: 14px;
+				padding: 12px 24px;
+				font-size: ${rem(18)};
 			`,
 		}
 		return config[index]
 	}
 
 	return {
-		Button: styled(elementType)`
+		Button: styled('button')`
 			label: Button;
 			color: blue;
+			border-radius: ${border.radius.basic};
+			border: 1px solid ${colors.primary};
 			${buttonSize}
 			${props => {
 				const { customizeCSS } = props
 				return customizeCSS
-			}}
+			}};
 		`,
 	}
 }
