@@ -11,15 +11,7 @@ function Home(props) {
 			<Header></Header>
 			<main>
 				<Form.Input></Form.Input>
-				<Button
-					customizeCSS={props => {
-						return mq({
-							color: ['green', 'gray', 'hotpink'],
-						})
-					}}
-				>
-					asdf
-				</Button>
+				<Button>asdf</Button>
 			</main>
 			<Footer></Footer>
 		</>
