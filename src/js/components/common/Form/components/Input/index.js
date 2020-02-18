@@ -7,41 +7,25 @@ const propTypes = {
 	value: PropTypes.any,
 	type: PropTypes.string,
 	ref: PropTypes.string,
-	readonly: PropTypes.bool,
 	placeholder: PropTypes.string,
-	onChange: PropTypes.func,
 }
 
 function Input(props) {
-	const {
-		type: inputType,
-		value,
-		ref,
-		readonly,
-		placeholder,
-		onChange,
-		...restProps
-	} = props
+	console.log('props :', props)
+	const { type: inputType, ref, placeholder, Change, input } = props
 	const getStyle = style(props)
 	const [type] = useState(inputType || 'text')
 
-	function handleChange(event) {
-		if (isFunction(onChange)) {
-			onChange(event)
-		}
-	}
+	// function handleChange(event) {
+	// 	console.log('event :', onChange)
+	// 	if (isFunction(onChange)) {
+	// 		onChange(event)
+	// 	}
+	// }
 
 	return (
 		<getStyle.Input>
-			<getStyle.InputText
-				value={value}
-				ref={ref}
-				type={type}
-				readonly={readonly}
-				placeholder={placeholder}
-				onChange={handleChange}
-				{...restProps}
-			></getStyle.InputText>
+			<getStyle.InputText {...input} type={type}></getStyle.InputText>
 			<getStyle.InputPrefix></getStyle.InputPrefix>
 			<getStyle.InputSuffix></getStyle.InputSuffix>
 		</getStyle.Input>

@@ -13,9 +13,38 @@ function LoginForm(props) {
 
 	const validate = values => {
 		const errors = {}
+		if (!values.firstName) {
+			errors.firstName = 'Required'
+		}
 		return errors
 	}
-	return <FinalForm onSubmit={onSubmit}>{}</FinalForm>
+	return (
+		<FinalForm onSubmit={onSubmit} validate={validate}>
+			{props => {
+				const { handleSubmit, form, submitting, values } = props
+				return (
+					<Form onSubmit={handleSubmit}>
+						<FinalField
+							name='firstName'
+							component={Form.Input}
+							placeholder='please type First Name'
+						/>
+						<Form.Error name='firstName' />
+						<FinalField
+							name='lastName'
+							component={Form.Input}
+							placeholder='please type Last Name'
+						/>
+						<Form.Error name='lastName' />
+						<button type='submit' disabled={submitting}>
+							Submit
+						</button>
+						<pre>{JSON.stringify(values, 0, 2)}</pre>
+					</Form>
+				)
+			}}
+		</FinalForm>
+	)
 }
 
 export default LoginForm

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 const propTypes = {}
 function Template() {
+	// props
+	// style
 	useEffect(() => {})
 
 	return <div></div>
