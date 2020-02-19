@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 const propTypes = {
 	value: PropTypes.any,
+	name: PropTypes.string,
 	type: PropTypes.string,
 	ref: PropTypes.string,
 	placeholder: PropTypes.string,
@@ -12,20 +13,13 @@ const propTypes = {
 
 function Input(props) {
 	console.log('props :', props)
-	const { type: inputType, ref, placeholder, Change, input } = props
 	const getStyle = style(props)
-	const [type] = useState(inputType || 'text')
-
-	// function handleChange(event) {
-	// 	console.log('event :', onChange)
-	// 	if (isFunction(onChange)) {
-	// 		onChange(event)
-	// 	}
-	// }
+	const { input } = props
+	console.log('input :', input)
 
 	return (
 		<getStyle.Input>
-			<getStyle.InputText {...input} type={type}></getStyle.InputText>
+			<getStyle.InputText type='text' {...input}></getStyle.InputText>
 			<getStyle.InputPrefix></getStyle.InputPrefix>
 			<getStyle.InputSuffix></getStyle.InputSuffix>
 		</getStyle.Input>

@@ -7,6 +7,7 @@ const propTypes = {}
 
 function Form(props) {
 	const { children, onSubmit, ...restProps } = props
+	console.log('onSubmit :', onSubmit)
 	useEffect(() => {})
 
 	return (
