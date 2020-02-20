@@ -7,7 +7,7 @@ const propTypes = {}
 function InputField(props) {
 	// props
 	const { name, ...restProps } = props
-	const [field] = useField(props)
+	const [field, meta, helpers] = useField(props)
 	const { setFieldValue } = useFormikContext()
 	// style
 
@@ -16,7 +16,7 @@ function InputField(props) {
 		setFieldValue(field.name, value)
 	}
 
-	return <Input onChange={onChange} value={field.value} {...restProps} />
+	return <Input {...restProps} onChange={onChange} value={field.value} />
 }
 InputField.propTypes = propTypes
 export default InputField

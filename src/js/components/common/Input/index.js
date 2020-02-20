@@ -12,12 +12,22 @@ const propTypes = {
 
 function Input(props) {
 	const getStyle = style(props)
-
+	const { onChange } = props
 	console.log('props :', props)
+	const handleChange = event => {
+		event.stopPropagation()
+		if (isFunction(onChange)) {
+			onChange(event)
+		}
+	}
 
 	return (
 		<getStyle.Input>
-			<getStyle.InputText type='text' {...props}></getStyle.InputText>
+			<getStyle.InputText
+				type='text'
+				ref={input => input && input.focus()}
+				{...props}
+			></getStyle.InputText>
 			<getStyle.InputPrefix></getStyle.InputPrefix>
 			<getStyle.InputSuffix></getStyle.InputSuffix>
 		</getStyle.Input>
