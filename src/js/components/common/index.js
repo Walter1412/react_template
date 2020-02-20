@@ -1,4 +1,5 @@
 import Button from 'components/common/Button'
-import Form from 'components/common/Form/'
+import Input from 'components/common/Input'
+import Error from 'components/common/Error'
 
-export { Button, Form }
+export { Button, Input, Error }

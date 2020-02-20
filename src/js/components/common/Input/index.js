@@ -13,9 +13,11 @@ const propTypes = {
 function Input(props) {
 	const getStyle = style(props)
 
+	console.log('props :', props)
+
 	return (
 		<getStyle.Input>
-			<getStyle.InputText></getStyle.InputText>
+			<getStyle.InputText type='text' {...props}></getStyle.InputText>
 			<getStyle.InputPrefix></getStyle.InputPrefix>
 			<getStyle.InputSuffix></getStyle.InputSuffix>
 		</getStyle.Input>
