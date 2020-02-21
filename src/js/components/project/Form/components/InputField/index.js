@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react'
 import { useField, useFormikContext } from 'formik'
 import { Input } from 'components/common'
 import PropTypes from 'prop-types'
@@ -18,5 +18,22 @@ function InputField(props) {
 
 	return <Input {...restProps} onChange={onChange} value={field.value} />
 }
+const ComponentWithRef = Component => {
+	const forwardRef = (props, ref) => {
+		const { current } = ref
+		return <Component {...props} forwardedRef={current} />
+	}
+	return React.forwardRef(forwardRef)
+}
+
+// const forwardRef = (props, ref) => {
+// 	return <InputField {...props} forwardedRef={ref} />
+// }
+
+const InputFieldWithRef = ComponentWithRef(InputField)
+
+// const InputFieldWithRef = React.forwardRef(forwardRef)
+
 InputField.propTypes = propTypes
-export default InputField
+
+export default InputFieldWithRef

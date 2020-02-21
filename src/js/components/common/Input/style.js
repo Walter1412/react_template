@@ -1,4 +1,5 @@
 import { styled, css, rem } from 'lib/plugins/emotion'
+import { useMemo } from 'react'
 import { useTheme } from 'emotion-theming'
 
 export default props => {
@@ -9,32 +10,37 @@ export default props => {
 	const { colors, border } = themeContext
 	// variables
 
+	const InputText = useMemo(
+		() => styled('input')`
+	label: InputText;
+	width: 100%;
+	height: 100%;
+	padding: 8px 16px;
+	border: 1px solid ${colors.primaryDarkest};
+	border-radius: ${border.radius.basic};
+	font-size ${rem(16)};
+	&:focus,&:active {
+		outline: none;
+		border-color: ${colors.primary};
+	}
+	&:hover{
+		border-color: ${colors.primary};
+	}
+	${props => {
+		const { customizeCSS } = props
+		return customizeCSS
+	}};
+`,
+		[]
+	)
+
 	return {
 		Input: styled('div')`
 			label: Input;
 			position: relative;
 			width: 100%;
 		`,
-		InputText: styled('input')`
-			label: InputText;
-			width: 100%;
-			height: 100%;
-			padding: 8px 16px;
-			border: 1px solid ${colors.primaryDarkest};
-			border-radius: ${border.radius.basic};
-			font-size ${rem(16)};
-			&:focus,&:active {
-				outline: none;
-				border-color: ${colors.primary};
-			}
-			&:hover{
-				border-color: ${colors.primary};
-			}
-			${props => {
-				const { customizeCSS } = props
-				return customizeCSS
-			}};
-		`,
+		InputText,
 		InputPrefix: styled('span')`
 			label: Prefix;
 			position: absolute;
