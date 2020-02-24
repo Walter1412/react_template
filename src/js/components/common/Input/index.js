@@ -21,11 +21,11 @@ function Input(props) {
 	}
 
 	return (
-		<getStyle.Input>
-			<getStyle.InputText type='text' {...props}></getStyle.InputText>
-			<getStyle.InputPrefix></getStyle.InputPrefix>
-			<getStyle.InputSuffix></getStyle.InputSuffix>
-		</getStyle.Input>
+		// <getStyle.Input>
+		// 	<getStyle.InputText type='text' {...props}></getStyle.InputText>
+		// 	<getStyle.InputPrefix></getStyle.InputPrefix>
+		// 	<getStyle.InputSuffix></getStyle.InputSuffix>
+		// </getStyle.Input>
 	)
 }
 
