@@ -4,6 +4,7 @@ import { Input } from 'components/common'
 import PropTypes from 'prop-types'
 
 const propTypes = {}
+
 function InputField(props) {
 	// props
 	const { name, ...restProps } = props
@@ -18,7 +19,7 @@ function InputField(props) {
 
 	return <Input {...restProps} onChange={onChange} value={field.value} />
 }
-const ComponentWithRef = Component => {
+const WithRef = Component => {
 	const forwardRef = (props, ref) => {
 		const { current } = ref
 		return <Component {...props} forwardedRef={current} />
@@ -26,13 +27,7 @@ const ComponentWithRef = Component => {
 	return React.forwardRef(forwardRef)
 }
 
-// const forwardRef = (props, ref) => {
-// 	return <InputField {...props} forwardedRef={ref} />
-// }
-
-const InputFieldWithRef = ComponentWithRef(InputField)
-
-// const InputFieldWithRef = React.forwardRef(forwardRef)
+const InputFieldWithRef = WithRef(InputField)
 
 InputField.propTypes = propTypes
 
