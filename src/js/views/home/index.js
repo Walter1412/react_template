@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
-import { Header, Footer } from 'components/project'
+import { styled, css, mq } from 'lib/plugins/emotion'
+import { Button } from 'components/common'
+import { Header, Footer, Form } from 'components/project'
 
 function Home(props) {
 	useEffect(() => {})
@@ -7,7 +9,10 @@ function Home(props) {
 	return (
 		<>
 			<Header></Header>
-			<main></main>
+			<main>
+				<Form.Input></Form.Input>
+				<Button>asdf</Button>
+			</main>
 			<Footer></Footer>
 		</>
 	)

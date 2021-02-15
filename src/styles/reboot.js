@@ -1,7 +1,7 @@
 import { css } from 'lib/plugins/emotion'
 import normalize from 'normalize.css'
 import Theme from './theme'
-const { fontFamily, color } = Theme
+const { fontFamily, colors, fontSize } = Theme
 
 export default () => css`
 	${normalize}
@@ -16,7 +16,8 @@ export default () => css`
 	body {
 		font-family: ${fontFamily};
 		line-height: 1.5;
-		color: ${color.primaryDarkest};
+		font-size: ${fontSize.basic}
+		color: ${colors.primaryDarkest};
 		-webkit-font-smoothing: subpixel-antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}

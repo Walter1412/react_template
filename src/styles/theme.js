@@ -1,7 +1,7 @@
 // global paramters for useTheme
 /* eslint-disable */
 export default {
-  color: {
+  colors: {
     primaryDarkest                    : 'rgb(043, 063, 087)', // #2b3f57: dark-grey-blue
     primaryDarker                     : 'rgb(039, 077, 134)', // #274d86: dusk-blue
     primaryDark                       : 'rgb(028, 084, 168)', // #1c54a8: sapphire
@@ -32,10 +32,16 @@ export default {
   },
   fontFamily                          : 'system, -apple-system, PingFang-TC, Segoe UI, Microsoft JhengHei, Roboto, Oxygen, Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
   fontSize: {
+    basic                             : '16px',
     xl                                : '20px',
     lg                                : '18px',
     md                                : '16px',
     sm                                : '14px',
     xs                                : '12px',
+  },
+  border:{
+    radius:{
+      basic                           : '4px',
+    }
   }
 }

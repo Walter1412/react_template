@@ -7,8 +7,8 @@ export default props => {
 	const themeContext = useTheme()
 	// variables
 	return {
-		Template: styled('div')`
-			label: Template;
+		Error: styled('div')`
+			label: Error;
 			${props => {
 				const { customizeCSS } = props
 				return customizeCSS

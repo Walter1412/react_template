@@ -13,7 +13,7 @@ export default {
 		label: wrapper;
 		width: 100%;
 		height: 100%;
-
+		border: 1px solid green;
 		${props => {
 			const { pageName } = props
 			return !pages[pageName] ? '' : pages[pageName]
